@@ -1,10 +1,21 @@
 pipeline {
     agent any
-    stages{
-        stage('Hello-world') {
+    stages {
+        stage('Build') {
             steps {
-                echo 'This is first pipeline code'
+                 echo 'This is first pipeline code'
            }
-        }       
-    } 
-}
+        }  
+        stage('QRtest') {
+            steps {
+                 echo 'test to qa branch'
+            }
+        }
+        stage('deploy') {
+            steps {
+                 echo 'deploy to dev to qa '
+            }
+        } 
+
+    }        
+} 
